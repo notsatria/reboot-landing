@@ -3,5 +3,15 @@
   "name": "reboot-landing",
   "compatibility_date": "2025-09-02",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "@tanstack/react-start/server-entry"
+  "main": "@tanstack/react-start/server-entry",
+  "routes": [
+    {
+      "pattern": "reboot.notsatria.com",
+      "custom_domain": true,
+    },
+    {
+      "pattern": "www.reboot.notsatria.com",
+      "custom_domain": true,
+    },
+  ],
 }
