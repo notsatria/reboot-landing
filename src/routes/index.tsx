@@ -1,11 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router'
+import Hero from '#/components/sections/Hero'
 
 export const Route = createFileRoute('/')({ component: LandingPage })
 
 function LandingPage() {
   return (
     <main>
-      {/* Sections will be built in Phases 4-8 */}
+      <Hero />
+      {/* Features, Screenshots, Testimonials, Download — added in Phases 5-7 */}
     </main>
   )
 }
