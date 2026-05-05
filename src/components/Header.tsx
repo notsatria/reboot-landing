@@ -4,7 +4,7 @@ import { Link } from '@tanstack/react-router'
 const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'Screenshots', href: '#screenshots' },
-  { label: 'Download', href: '#download' },
+  { label: 'Download', href: '#tester' },
 ]
 
 export default function Header() {
@@ -46,10 +46,10 @@ export default function Header() {
         </div>
 
         <a
-          href="#download"
+          href="#tester"
           className="hidden rounded-full bg-streak-orange px-5 py-2 text-sm font-semibold text-white no-underline transition hover:bg-streak-orange-alt md:inline-block"
         >
-          Download on Play Store
+          Join Testing
         </a>
 
         {/* Mobile hamburger */}
@@ -85,11 +85,11 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#download"
+              href="#tester"
               className="mt-2 inline-block rounded-full bg-streak-orange px-5 py-2.5 text-center text-sm font-semibold text-white no-underline transition hover:bg-streak-orange-alt"
               onClick={() => setMobileOpen(false)}
             >
-              Download on Play Store
+              Join Testing
             </a>
           </div>
         </div>
