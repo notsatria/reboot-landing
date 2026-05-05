@@ -67,6 +67,7 @@
   --color-streak-orange-alt: var(--streak-orange-alt);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
+  --color-white: #fff;
 
   /* shadcn/ui color mappings */
   --color-background: var(--background);
@@ -129,61 +130,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  color: var(--primary-blue);
-  text-decoration: none;
-  transition: color 180ms ease;
-}
+@layer components {
+  .page-wrap {
+    width: min(1200px, calc(100% - 2rem));
+    margin-inline: auto;
+  }
 
-a:hover {
-  color: #3aade0;
-}
+  .feature-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    transition: border-color 180ms ease, transform 180ms ease;
+  }
 
-code {
-  font-size: 0.9em;
-  border: 1px solid var(--border);
-  background: var(--card);
-  border-radius: 7px;
-  padding: 2px 7px;
-}
+  .feature-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-blue);
+  }
 
-pre code {
-  border: 0;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  font-size: inherit;
-  color: inherit;
-}
-
-.prose pre {
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--card);
-  color: var(--text-primary);
-}
-
-.page-wrap {
-  width: min(1200px, calc(100% - 2rem));
-  margin-inline: auto;
-}
-
-.feature-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  transition: border-color 180ms ease, transform 180ms ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--primary-blue);
-}
-
-button,
-a {
-  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease,
-    transform 180ms ease;
+  .prose pre {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--text-primary);
+  }
 }
 
 @layer base {
@@ -193,5 +163,37 @@ a {
   body {
     background-color: var(--surface-dark);
     color: var(--text-primary);
+  }
+
+  a {
+    color: var(--primary-blue);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #3aade0;
+  }
+
+  button,
+  a {
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  code {
+    font-size: 0.9em;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 7px;
+    padding: 2px 7px;
+  }
+
+  pre code {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+    color: inherit;
   }
 }
