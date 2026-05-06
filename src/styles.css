@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
-@import 'tw-animate-css';
+@import "tw-animate-css";
 
 /* Stop PMO Brand Tokens — Dark-only theme */
 :root {
   /* Brand surfaces */
-  --surface-dark: #101C22;
-  --surface-deeper: #0E191E;
-  --card: #1C272D;
+  --surface-dark: #101c22;
+  --surface-deeper: #0e191e;
+  --card: #1c272d;
   --border: #253035;
 
   /* Brand accents */
-  --primary-blue: #1193D4;
-  --streak-orange: #F48C25;
-  --streak-orange-alt: #F9771C;
+  --primary-blue: #1193d4;
+  --streak-orange: #f48c25;
+  --streak-orange-alt: #f9771c;
 
   /* Text */
-  --text-primary: #FFFFFF;
-  --text-secondary: #9CA3AF;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
 
   /* shadcn/ui tokens (dark) */
   --background: oklch(0.165 0.015 210);
@@ -56,7 +56,7 @@
 }
 
 @theme inline {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   /* Brand colors for Tailwind */
   --color-surface-dark: var(--surface-dark);
@@ -121,9 +121,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-sans);
   background-color: var(--surface-dark);
-  background:
-    radial-gradient(800px 400px at 50% 0%, rgba(17, 147, 212, 0.08), transparent 60%),
-    linear-gradient(180deg, var(--surface-dark) 0%, var(--surface-deeper) 100%);
+  background: radial-gradient(800px 400px at 50% 0%, rgba(17, 147, 212, 0.08), transparent 60%), linear-gradient(180deg, var(--surface-dark) 0%, var(--surface-deeper) 100%);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -172,7 +170,9 @@ pre code {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 1rem;
-  transition: border-color 180ms ease, transform 180ms ease;
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
 }
 
 .feature-card:hover {
@@ -182,7 +182,10 @@ pre code {
 
 button,
 a {
-  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease,
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
     transform 180ms ease;
 }
 
